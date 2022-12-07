@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster">
+
+  <title>Salkantay Trek Countdown</title>
+  <style>
+    body {
+      background-image: url('bg.jpg');
+      background-color: rgba(255,255,255,0.2);
+      background-blend-mode: lighten;
+      background-repeat: no-repeat;
+      background-attachment: fixed;  
+      background-size: cover;
+      background-position: center;
+      font-family: 'Lobster', serif;
+    }
+    h1 {
+      font-weight: bold;
+      font-size: 80px;
+      text-align: center;
+    }
+    #div1 h1 {
+      margin: 200px 0 0 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="div1">
+    <h1 id="countdown"></h1>
+  </div>
+
+  <script>
+    var countDownDate = new Date("Oct 15, 2023 00:00:00").getTime();
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+
+    document.getElementById("countdown").innerHTML = 
+    Math.floor(distance / (1000 * 60 * 60 * 24)) + " days to go!"
+  </script>
+</body>
+</html>
